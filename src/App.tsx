@@ -1,5 +1,5 @@
 import './App.css'
-import { GameCard } from './components/GameCard';
+import { GameGrid } from './components/GameGrid';
 import { mockGames } from './data/game';
 
 function App() {
@@ -11,11 +11,7 @@ function App() {
           <p className="text-zinc-400 text-sm mt-1">Explore a full collection of video games</p>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {mockGames.results.map((game) => (
-            <GameCard key={game.id} game={game} />
-          ))}
-        </div>
+        <GameGrid games={mockGames.results} />
       </div>
     </div>
   )
