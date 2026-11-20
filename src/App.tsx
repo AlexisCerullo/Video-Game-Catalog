@@ -1,5 +1,6 @@
 import './App.css'
 import { GameGrid } from './components/GameGrid';
+import { SearchBar } from './components/SearchBar';
 import { mockGames } from './data/game';
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
           <h1 className="text-3xl font-bold tracking-tight">Video Game Catalog</h1>
           <p className="text-zinc-400 text-sm mt-1">Explore a full collection of video games</p>
         </header>
-
+        <SearchBar onSearch={(query) => console.log('Searching for:', query)} />
         <GameGrid games={mockGames.results} />
       </div>
     </div>
